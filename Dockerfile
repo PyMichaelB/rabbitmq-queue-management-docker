@@ -16,8 +16,11 @@ USER spring
 WORKDIR /home/spring
 
 ARG RABBITMQ_QUEUE_MGMT_VERSION
-COPY --from=builder /src/build/libs/rabbitmq-queue-management-${RABBITMQ_QUEUE_MGMT_VERSION}.jar rabbitmq-queue-management.jar
+COPY --chown=spring:spring --from=builder /src/build/libs/rabbitmq-queue-management-${RABBITMQ_QUEUE_MGMT_VERSION}.jar rabbitmq-queue-management.jar
 COPY --chown=spring:spring artifacts/docker-entrypoint.sh docker-entrypoint.sh
+
+RUN chmod 440 rabbitmq-queue-management.jar \
+    && chmod 540 docker-entrypoint.sh
 
 EXPOSE 8780
 EXPOSE 8781

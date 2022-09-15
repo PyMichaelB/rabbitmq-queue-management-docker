@@ -11,16 +11,16 @@ Hence, the base OS is Ubuntu 20.04.
 
 The OpenJDK base images are now deprecated hence are not being used but eclipse-temurin provide offical Docker hub images using OpenJDK binaries.
 
-The images built using this repo can be found in the Docker Hub repo: `michael18781/rabbitmq-queue-management`.
+The images built using this repo can be found in the Docker Hub repo: `pymichaelb/rabbitmq-queue-management`.
 
 To use, first pull the required image:
 
 ```
-docker pull michael18781/rabbitmq-queue-management:<TAG>
+docker pull pymichaelb/rabbitmq-queue-management:<TAG>
 ```
 
 Then, make sure a config file (details in the project itself) is mounted on the container and then run:
 
 ```
-docker run -p <PORT>:8780 michael18781/rabbitmq-queue-management:<TAG> -Dspring.config.location=<PATH TO CONFIG FILE>
+docker run -p <PORT>:8780 pymichaelb/rabbitmq-queue-management:<TAG> -Dspring.config.location=<PATH TO CONFIG FILE>
 ```

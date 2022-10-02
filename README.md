@@ -24,3 +24,7 @@ Then, make sure a config file (details in the project itself) is mounted on the 
 ```
 docker run -p <PORT>:8780 pymichaelb/rabbitmq-queue-management:<TAG> -Dspring.config.location=<PATH TO CONFIG FILE>
 ```
+
+## Releasing
+1) Merge all changes to master create a new release for the head commit on master with tag and title in format vX.Y.Z
+2) Run `make image` and then `make push` to push the image to the Docker Hub repo

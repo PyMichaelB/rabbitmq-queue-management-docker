@@ -1,7 +1,7 @@
 image:
   # The image name to be built - this should contain your image registry if applicable
   name: pymichaelb/rabbitmq-queue-management
-  version: "1.1.1"
+  version: "1.2.0"
 
-rabbitmq_queue_management: "1.1.1"
-rabbitmq_queue_management_sha: "6b59269ae1b86488fd32cc6a4a11837d151741c6"
+rabbitmq_queue_management: "1.2.0"
+rabbitmq_queue_management_sha: "2399aa1aced23cdf1140f397b21a0da05e28223d"

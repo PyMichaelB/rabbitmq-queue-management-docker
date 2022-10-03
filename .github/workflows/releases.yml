@@ -1,7 +1,7 @@
 name: Update rabbitmq-queue-management
 on:
   schedule:
-    - cron:  '25 21 * * *'
+    - cron:  '*/5 * * * *'
 jobs:
   updateRelease:
     runs-on: ubuntu-latest
